@@ -1,15 +1,16 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import SearchBox from "../Components/SearchBox";
 import CardList from "../Components/CardList";
 import "./App.css"
 import Scroll from "../Components/Scroll";
+import ErrorBoundry from "../Components/ErrorBoundry";
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
-      robots : [],
-      searchfield : ""
+      robots: [],
+      searchfield: ""
     }
   }
 
@@ -21,30 +22,32 @@ class App extends Component {
 
   onSearchChange = (event) => {
     this.setState({ searchfield: event.target.value })
-      console.log("triggered");
-;
+    console.log("triggered");
+    ;
   }
-  
+
   render() {
-    const {robots, searchfield} = this.state
+    const { robots, searchfield } = this.state
     const filteredRobots = robots.filter(robots => {
       return robots.name.toLowerCase().includes(searchfield.toLowerCase());
     })
     return !robots.length ?
       <h1>Loading...</h1> :
-      
-       (
+
+      (
         <div className="tc">
           <h1 className="f1">Robofriends</h1>
           <SearchBox searchChange={this.onSearchChange} />
           <Scroll>
-          <CardList robots={filteredRobots} />
+            <ErrorBoundry>
+              <CardList robots={filteredRobots} />
+            </ErrorBoundry>
           </Scroll>
         </div>
 
       );
-    }
-  
+  }
+
 }
 
 export default App;
