@@ -2,7 +2,7 @@ import React from "react";
 
 
 
-const Searcbox = ({ searchfield, searchChange }) => {
+const Searcbox = ({ searchField, searchChange }) => {
   return (
     <div className="pa2">
       <input
