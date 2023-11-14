@@ -8,17 +8,15 @@ import ErrorBoundry from "../Components/ErrorBoundry";
 import { setSearchField, requestRobots } from "../actions";
 
 
-const mapStateToProps = state => {
-  
+const mapStateToProps = (state) => {
   return {
-    searchField: state.searchField,
+    searchField: state.searchRobots.searchField,
     robots: state.requestRobots.robots,
-    isPending: state.requestRobots.isPending,
-    error: state.requestRobots.error
+    isPending: state.requestRobots.isPending
   }
 }
 
-const mapDispachToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
   return {
     onSearchChange: (event) => dispatch(setSearchField(event.target.value)),
     onRequestRobots: () => dispatch(requestRobots())
@@ -57,4 +55,4 @@ class App extends Component {
 }
 }
 
-export default connect(mapStateToProps, mapDispachToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
