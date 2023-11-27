@@ -3,6 +3,7 @@ import React from "react";
 
 
 const Searcbox = ({ searchChange }) => {
+  console.log('SearchBox')
   return (
     <div className="pa2">
       <input

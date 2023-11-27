@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { setSearchField, requestRobots } from "../actions";
+import ErrorBoundry from "../Components/ErrorBoundry";
+import "./App.css"
 import SearchBox from "../Components/SearchBox";
 import CardList from "../Components/CardList";
-import "./App.css"
 import Scroll from "../Components/Scroll";
-import ErrorBoundry from "../Components/ErrorBoundry";
-import { setSearchField, requestRobots } from "../actions";
+
 
 
 const mapStateToProps = (state) => {

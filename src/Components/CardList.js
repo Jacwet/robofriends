@@ -3,7 +3,7 @@ import Card from "../Components/Card";
 
 
 const CardList = ({ robots }) => {
-
+  console.log('Cardlist')
   return (
     <div>
       {

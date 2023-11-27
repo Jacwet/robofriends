@@ -10,9 +10,12 @@ import { searchRobots, requestRobots } from './reducers';
 import {createLogger} from 'redux-logger';
 import thunkMiddleware from 'redux-thunk';
 
+import * as serviceWorker from './serviceWorker';
+
 const logger = createLogger({});
 const rootReducer = combineReducers({searchRobots, requestRobots})
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware, logger));
+
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -21,5 +24,4 @@ root.render(
    <Provider store={store}><App/> </Provider> 
   </React.StrictMode>
 );
-
 reportWebVitals();
