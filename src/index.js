@@ -6,7 +6,6 @@ import thunkMiddleware from 'redux-thunk';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, combineReducers} from 'redux';
 import App from './Containers/App';
-;
 import 'tachyons';
 import { searchRobots, requestRobots } from './reducers';
 import reportWebVitals from './reportWebVitals'

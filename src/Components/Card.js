@@ -1,4 +1,5 @@
 import React from "react";
+import CounterButton from "./CounterButton";
 
 
 
@@ -11,6 +12,7 @@ const Card = ({ name, email, id }) => {
       <div>
         <h2>{name}</h2>
         <p>{email}</p>
+        <CounterButton />
       </div>
     </div>
   )

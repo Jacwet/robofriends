@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<DocumentFragment>
+  <button
+    color="red"
+    id="counter"
+  >
+    <h1>
+      Count: 0
+    </h1>
+    <h1>
+      Color: blue
+    </h1>
+  </button>
+</DocumentFragment>
+`;
